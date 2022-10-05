@@ -71,10 +71,9 @@ object Hello extends Greeting with App {
     ret
   }
 
-  val res = ctx.run(query[City]).filter(_.id == 3208)
+  ctx.run(query[City].insert(City(20011, lift(PIIString("kest")), "KST", "Kest City", 0)))
+  val res = ctx.run(query[City]).filter(_.id == 20011)
   println(res)
-
-  ctx.run(query[City].insert(City(20010, lift(PIIString("jest")), "JST", "Jest City", 0)))
 }
 
 trait Greeting {
