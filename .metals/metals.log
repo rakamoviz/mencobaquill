@@ -326,3 +326,9 @@ Caused by: java.lang.NullPointerException: Cannot invoke "scala.meta.internal.me
 2022.10.05 11:09:12 WARN  Ignoring duplicate 'initialized' notification.[0m
 2022.10.05 11:09:12 WARN  Ignoring duplicate 'initialized' notification.[0m
 2022.10.05 11:09:12 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 11:16:27 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 11:16:30 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 11:16:34 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 11:16:34 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 11:16:45 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 11:16:45 WARN  Ignoring duplicate 'initialized' notification.[0m

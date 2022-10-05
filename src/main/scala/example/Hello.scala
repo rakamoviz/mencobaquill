@@ -35,6 +35,16 @@ case class CountryLanguage(countrycode: String,
 
 object Hello extends Greeting with App {
   println(greeting)
+
+  val pgDataSource = new org.postgresql.ds.PGSimpleDataSource()
+  pgDataSource.setUser("raka")
+  pgDataSource.setPassword("password")
+  pgDataSource.setDatabaseName("raka")
+  val config = new HikariConfig()
+  config.setDataSource(pgDataSource)
+  val ctx = new PostgresJdbcContext(LowerCase, new HikariDataSource(config))
+  import ctx._
+
   implicit val encodePII = MappedEncoding[PII, String]{value =>
     println("I AM ENCODING")
     val ret: String = s"${value.value}_xxx"
@@ -47,19 +57,10 @@ object Hello extends Greeting with App {
     ret
   }
 
-  val pgDataSource = new org.postgresql.ds.PGSimpleDataSource()
-  pgDataSource.setUser("raka")
-  pgDataSource.setPassword("password")
-  pgDataSource.setDatabaseName("raka")
-  val config = new HikariConfig()
-  config.setDataSource(pgDataSource)
-  val ctx = new PostgresJdbcContext(LowerCase, new HikariDataSource(config))
-  import ctx._
-
   val res = ctx.run(query[City]).filter(_.id == 3208)
   println(res)
 
-  ctx.run(query[City].insert(City(20003, PII("cest"), "CST", "Cest City", 0)))
+  ctx.run(query[City].insert(City(20004, PII("dest"), "DST", "Dest City", 0)))
 }
 
 trait Greeting {
