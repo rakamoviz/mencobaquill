@@ -445,3 +445,156 @@ Caused by: java.lang.NullPointerException: Cannot invoke "scala.meta.internal.me
 2022.10.05 12:18:50 WARN  Ignoring duplicate 'initialized' notification.[0m
 2022.10.05 12:19:13 WARN  Ignoring duplicate 'initialized' notification.[0m
 2022.10.05 12:19:13 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:21:43 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:21:53 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:22:25 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:22:25 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:22:28 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:22:34 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:22:45 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:22:45 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:25:05 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:25:08 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:25:08 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:31:41 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/rcokorda/Projects/mencobaquill/.metals/lsp.trace.json or /home/rcokorda/.cache/metals/lsp.trace.json[0m
+Oct 05, 2022 1:31:42 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "initialized",
+  "params": {}
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.lang.NullPointerException: Cannot invoke "scala.meta.internal.metals.Tables.connect()" because the return value of "scala.meta.internal.metals.MetalsLanguageServer.tables()" is null
+	at scala.meta.internal.metals.MetalsLanguageServer.initialized(MetalsLanguageServer.scala:977)
+	... 16 more
+
+2022.10.05 13:31:47 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:31:49 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:31:49 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:34:29 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:34:29 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:34:31 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:34:34 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:34:38 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:34:38 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:35:39 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:35:39 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:36:51 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:36:57 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:36:58 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:37:03 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:37:07 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:37:07 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:37:08 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:37:11 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:37:15 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:37:20 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:37:20 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:37:47 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:37:50 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:37:52 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:37:52 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:42:36 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:42:37 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:42:39 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:42:40 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:42:49 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:42:53 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:42:59 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:43:02 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:43:02 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:43:03 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:43:06 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:43:09 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:43:12 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:43:12 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:44:11 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:44:13 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:44:13 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:48:39 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 13:49:12 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:45:59 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:46:01 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:46:04 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:46:07 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:46:08 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:46:10 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:46:13 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:46:13 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:46:15 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:46:18 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:46:20 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:46:20 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:46:28 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:46:31 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:46:35 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:48:11 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:48:17 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:48:19 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:48:23 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:48:23 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:48:27 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:48:33 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:48:39 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:48:40 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:48:49 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:48:52 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:48:53 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:48:55 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:48:59 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:49:02 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:49:05 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:49:19 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:49:21 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:49:25 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:49:30 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:49:34 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:49:34 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:49:38 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:49:41 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:49:50 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:49:56 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:50:01 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:50:07 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:50:07 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:52:48 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:52:52 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:52:55 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:52:55 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:53:06 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:53:10 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:53:19 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:53:23 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:53:30 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:53:32 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:53:37 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:53:43 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:53:47 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:53:48 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:53:52 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:53:55 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:53:55 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:55:31 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:55:31 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:56:58 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:57:12 WARN  Ignoring duplicate 'initialized' notification.[0m
+2022.10.05 14:57:12 WARN  Ignoring duplicate 'initialized' notification.[0m

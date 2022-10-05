@@ -7,7 +7,8 @@ ThisBuild / organizationName := "example"
 
 libraryDependencies ++= Seq(
   "io.getquill"          %% "quill-jdbc" % "3.4.10",
-  "org.postgresql"       %  "postgresql"     % "42.2.8"
+  "org.postgresql"       % "postgresql" % "42.2.8",
+  "com.chuusai" %% "shapeless" % "2.3.3"
 )
 
 lazy val root = (project in file("."))
