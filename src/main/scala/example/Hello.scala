@@ -19,11 +19,28 @@ object Hello extends Greeting with App {
 
   def doItWithTrait(theVal: PIIString) = println(theVal)
 
+  //https://scalac.io/blog/introduction-to-programming-with-zio-functional-effects/
+
+  final class PII private (value: Either[String, String]) {
+    lazy val encrypted : String = {
+      println("ENKRIPTINK")
+      value.fold(encryptedStr => encryptedStr, decryptedStr => s"${decryptedStr}_xxx")
+    }
+    lazy val decrypted : String = {
+      println("DEKRIPTINK")
+      value.fold(encryptedStr => encryptedStr.dropRight(4), decryptedStr => decryptedStr)
+    }
+  }
+
+  object PII {
+    def fromEncrypted(encryptedStr: String): PII = new PII(Left(encryptedStr)) 
+    def fromDecrypted(decryptedStr: String): PII = new PII(Right(decryptedStr)) 
+  }
+
   doItWithTrait(PIIString("Yes"))
   
-  case class PII(value: String)
   case class City(id: Int, 
-                  name: PIIString, 
+                  name: PII, 
                   countryCode: String, 
                   district: String, 
                   population: Int)
@@ -59,21 +76,34 @@ object Hello extends Greeting with App {
   val ctx = new PostgresJdbcContext(LowerCase, new HikariDataSource(config))
   import ctx._
 
-  implicit val encodePII = MappedEncoding[PIIString, String]{ piiStr =>
+  implicit val encodePIIString = MappedEncoding[PIIString, String]{ piiStr =>
     println("I AM ENCODING")
     val ret: String = s"${piiStr}_xxx"
     ret
   }
   
-  implicit val decodePII = MappedEncoding[String, PIIString]{ str =>
+  implicit val decodePIIString = MappedEncoding[String, PIIString]{ str =>
     println("I AM DECODING")
     val ret : PIIString = PIIString(str.dropRight(4))
     ret
   }
+  
+  implicit val encodePII = MappedEncoding[PII, String]{ pii =>
+    println(s"ENCODING PII ${pii}")
+    val ret: String = pii.encrypted
+    ret
+  }
+  
+  implicit val decodePII = MappedEncoding[String, PII]{ str =>
+    println("DECODING PII")
+    val ret : PII = PII.fromEncrypted(str)
+    ret
+  }
 
-  ctx.run(query[City].insert(City(20011, lift(PIIString("kest")), "KST", "Kest City", 0)))
-  val res = ctx.run(query[City]).filter(_.id == 20011)
-  println(res)
+  ctx.run(query[City].insert(City(20016, lift(PII.fromDecrypted("pest")), "PST", "Pest City", 0)))
+  val res = ctx.run(query[City]).filter(_.id == 20016)
+  println(res.head)
+  println(res.head.name.decrypted)
 }
 
 trait Greeting {
